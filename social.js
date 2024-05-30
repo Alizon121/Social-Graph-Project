@@ -7,12 +7,35 @@ class SocialNetwork {
     this.currentID = 0;
   }
 
+  
   addUser(name) {
-    // Your code here 
+//     // Have the user object contain an ID and a name key
+this.currentID++
+
+let newUser = {
+  "id" : this.currentID,
+  "name" : name
+}
+
+
+this.users[this.currentID] = newUser
+this.follows[this.currentID] = new Set()
+
+// console.log(this.users)
+
+return this.currentID
+
   }
 
   getUser(userID) {
-    // Your code here 
+    // if this.users contains the value, then return userID
+
+
+    if (this.users['1']['id']=== userID) {
+      return this.users["1"]
+    } else {
+      return null
+    }
   }
 
   follow(userID1, userID2) {
