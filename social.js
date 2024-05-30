@@ -38,15 +38,28 @@ return this.currentID
   }
 
   follow(userID1, userID2) {
-    // Your code here 
+
+  //  if the follow was successful, return true
+  // The graph is unidirectional (e.g. instagram)
+
+if (this.users[userID1] && this.users[userID2]) { // we can directly verify whether the user exists with the idnex (e.g.[userID1])
+  this.follows[userID1].add(userID2)
+  return true
+}
+else return false
   }
 
   getFollows(userID) {
-    // Your code here 
+    // return a set contianing all the IDs of the users that the users follows
+  return this.follows[userID]
   }
 
   getFollowers(userID) {
-    // Your code here 
+    // return set containing all followers of userID
+    // Who follows userID?
+
+return console.log(userID)
+  
   }
 
   getRecommendedFollows(userID, degrees) {
