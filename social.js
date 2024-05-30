@@ -30,12 +30,11 @@ return this.currentID
   getUser(userID) {
     // if this.users contains the value, then return userID
 
-
-    if (this.users['1']['id']=== userID) {
-      return this.users["1"]
-    } else {
-      return null
-    }
+    if (this.users[this.currentID] && this.users[this.currentID]['id'] === userID) {
+    return this.users[this.currentID];
+  } else {
+    return null;
+  }
   }
 
   follow(userID1, userID2) {
